@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Thais's News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <app-noticias [noticias]="noticias"></app-noticias>
+
+  <ion-infinite-scroll threshold="150px" 
+                       position="bottom" 
+                       (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" 
+                                 loadingText="Carregando informações">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
